@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ליאב כהן | שיווק ומכירות — תוכנית ליווי לבעלי עסקים</title>
+<meta name="description" content="תוכנית ליווי מכירות ושיווק לבעלי עסקי שירות. 3 חודשים של עבודה אמיתית — לא קורס, לא ייעוץ. תוצאות.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #E8600A;
+  --primary-dark: #C04E08;
+  --bg: #0D0D0D;
+  --surface: #161616;
+  --surface-2: #1E1E1E;
+  --border: #2A2A2A;
+  --text: #F0EDE8;
+  --text-muted: #8A8680;
+  --gold: #C9A84C;
+  --radius-card: 16px;
+  --radius-btn: 8px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Assistant', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+h1 { font-size: 56px; }
+h2 { font-size: 40px; margin-bottom: 24px; }
+h3 { font-size: 24px; }
+
+a { color: var(--primary); text-decoration: none; }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: 96px 0;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  font-family: 'Assistant', sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  border: none;
+  border-radius: var(--radius-btn);
+  padding: 16px 40px;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease, background 0.2s ease;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+  background: var(--primary-dark);
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 128px 24px 96px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 40%, rgba(232,96,10,0.13) 0%, transparent 70%),
+    linear-gradient(180deg, var(--bg) 0%, var(--surface) 100%);
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 200px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero h1 {
+  margin-bottom: 24px;
+}
+
+.hero-sub {
+  font-size: 20px;
+  color: var(--text-muted);
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto 48px;
+  line-height: 1.6;
+}
+
+/* ── PAIN POINTS ── */
+.pain-section {
+  background: var(--bg);
+}
+
+.pain-title {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.pain-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.pain-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  border-inline-start: 4px solid var(--primary);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pain-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 24px rgba(232,96,10,0.15), 0 1px 4px rgba(0,0,0,0.4);
+}
+
+.pain-card h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.pain-card p {
+  color: var(--text-muted);
+  font-size: 16px;
+}
+
+/* ── SOLUTION ── */
+.solution-section {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.solution-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 64px;
+}
+
+.solution-text {
+  flex: 1;
+}
+
+.solution-text p {
+  margin-bottom: 16px;
+  color: var(--text-muted);
+}
+
+.solution-text p:first-of-type {
+  color: var(--text);
+}
+
+.solution-photo {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.photo-placeholder {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.photo-name {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.photo-title {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+/* ── PROGRAM ── */
+.program-section {
+  background: var(--bg);
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.program-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--primary);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 24px rgba(232,96,10,0.15), 0 1px 4px rgba(0,0,0,0.4);
+}
+
+.program-card h3 {
+  margin-bottom: 12px;
+}
+
+.program-card p {
+  color: var(--text-muted);
+  font-size: 16px;
+}
+
+/* ── RESULTS ── */
+.results-section {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.big-stat {
+  margin: 48px 0;
+}
+
+.big-stat .number {
+  font-size: 72px;
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.big-stat .stat-sub {
+  color: var(--text-muted);
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 48px 0;
+}
+
+.video-placeholder {
+  aspect-ratio: 16/9;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: transform 0.2s ease;
+}
+
+.video-placeholder:hover {
+  transform: translateY(-4px);
+}
+
+.play-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(232,96,10,0.2);
+  border: 2px solid var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-icon::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 18px;
+  border-color: transparent transparent transparent var(--primary);
+  margin-inline-start: 4px;
+}
+
+.video-label {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 48px;
+  text-align: start;
+}
+
+.testimonial-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.testimonial-photo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.testimonial-text {
+  flex: 1;
+}
+
+.testimonial-text blockquote {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.testimonial-name {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.testimonial-biz {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* ── PRICING ── */
+.pricing-section {
+  background: var(--bg);
+}
+
+.pricing-section h2 {
+  text-align: center;
+}
+
+.pricing-note {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 48px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.pricing-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 40px 32px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 24px rgba(232,96,10,0.15), 0 1px 4px rgba(0,0,0,0.4);
+}
+
+.pricing-card.featured {
+  border-color: var(--primary);
+  position: relative;
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: #fff;
+  font-weight: 900;
+  font-size: 13px;
+  padding: 4px 20px;
+  border-radius: 20px;
+}
+
+.pricing-card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.pricing-card .pricing-desc {
+  color: var(--text-muted);
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.pricing-features {
+  list-style: none;
+  text-align: start;
+  margin-bottom: 32px;
+  flex: 1;
+}
+
+.pricing-features li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.pricing-features li::before {
+  content: '✓';
+  color: var(--primary);
+  font-weight: 700;
+  margin-inline-end: 8px;
+}
+
+.pricing-card .btn-primary {
+  width: 100%;
+  font-size: 16px;
+  padding: 14px 24px;
+}
+
+/* ── FAQ ── */
+.faq-section {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.faq-list {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-family: 'Assistant', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: start;
+  padding: 24px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.faq-arrow {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.faq-arrow::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-inline-start: 2px solid var(--primary);
+  border-bottom: 2px solid var(--primary);
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-arrow::after {
+  transform: rotate(135deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.faq-answer-inner {
+  padding-bottom: 24px;
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ── FORM ── */
+.form-section {
+  background: var(--bg);
+  text-align: center;
+}
+
+.form-section h2 {
+  margin-bottom: 8px;
+}
+
+.form-sub {
+  color: var(--text-muted);
+  margin-bottom: 48px;
+  font-size: 18px;
+}
+
+.lead-form {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 16px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-btn);
+  color: var(--text);
+  font-family: 'Assistant', sans-serif;
+  font-size: 17px;
+  direction: rtl;
+  text-align: right;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: var(--text-muted);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.form-group input.error {
+  border-color: #e74c3c;
+}
+
+.form-error {
+  color: #e74c3c;
+  font-size: 14px;
+  text-align: start;
+  margin-top: 4px;
+  display: none;
+}
+
+.form-submit-btn {
+  width: 100%;
+  padding: 18px 40px;
+  font-size: 20px;
+  margin-top: 8px;
+  position: relative;
+}
+
+.form-submit-btn .spinner {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  margin-inline-start: 8px;
+  vertical-align: middle;
+}
+
+.form-submit-btn.loading .btn-text {
+  opacity: 0.7;
+}
+
+.form-submit-btn.loading .spinner {
+  display: inline-block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.form-global-error {
+  color: #e74c3c;
+  margin-top: 16px;
+  display: none;
+}
+
+.form-success {
+  display: none;
+}
+
+.form-success h3 {
+  color: var(--gold);
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.form-success p {
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
+
+.calendly-wrapper {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  min-height: 600px;
+}
+
+.calendly-wrapper iframe {
+  width: 100%;
+  height: 650px;
+  border: none;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 48px 0;
+  text-align: center;
+}
+
+.footer-name {
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.footer-tagline {
+  color: var(--text-muted);
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+.footer-links {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+.footer-copy {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal-stagger.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── HERO ANIMATION ── */
+.hero-content h1,
+.hero-content .hero-sub,
+.hero-content .btn-primary {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.hero-content .hero-sub {
+  animation-delay: 0.15s;
+}
+
+.hero-content .btn-primary {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 36px; }
+  h2 { font-size: 28px; }
+
+  section { padding: 64px 0; }
+
+  .hero {
+    min-height: auto;
+    padding: 96px 24px 64px;
+  }
+
+  .hero-sub {
+    font-size: 17px;
+  }
+
+  .solution-inner {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .program-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .big-stat .number {
+    font-size: 48px;
+  }
+
+  .btn-primary {
+    padding: 14px 32px;
+    font-size: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-stagger {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .hero-content h1,
+  .hero-content .hero-sub,
+  .hero-content .btn-primary {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+  .faq-answer {
+    transition: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ════════ HERO ════════ -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>אתה לא צריך עוד לידים.<br>אתה צריך לדעת לסגור.</h1>
+    <p class="hero-sub">תוכנית ליווי מכירות ושיווק לבעלי עסקי שירות שתקועים על <span dir="ltr">₪10K–20K</span> בחודש — ויודעים שהם שווים יותר.</p>
+    <a href="#lead-form" class="btn-primary">אני רוצה לצאת מהתקרה</a>
+  </div>
+</section>
+
+<!-- ════════ PAIN POINTS ════════ -->
+<section class="pain-section" id="pain">
+  <div class="container">
+    <h2 class="pain-title reveal">אם אתה מזדהה עם אחד מהמשפטים האלה — המשך לקרוא</h2>
+    <div class="pain-grid">
+      <div class="pain-card reveal-stagger" style="transition-delay:0s">
+        <h3>שונא לעשות מכירות</h3>
+        <p>אתה מרגיש לחוץ בכל שיחת מכירה, לא אותנטי, ולפעמים מוותר על לידים טובים כי פשוט לא יודע איך להסגיר בלי להרגיש כמו נוכל.</p>
+      </div>
+      <div class="pain-card reveal-stagger" style="transition-delay:0.1s">
+        <h3>יש לידים. אין סגירות.</h3>
+        <p>הלקוחות "חושבים על זה", "חוזרים אליך", ואתה כבר יודע מה זה אומר. הלידים נכנסים — אבל הכסף לא.</p>
+      </div>
+      <div class="pain-card reveal-stagger" style="transition-delay:0.2s">
+        <h3>תקוע על אותה הכנסה</h3>
+        <p>חודש אחרי חודש אותם מספרים. אתה עובד קשה, לא מבין למה אתה לא גדל, ומתחיל לחשוב שאולי זה התקרה שלך.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ SOLUTION ════════ -->
+<section class="solution-section" id="solution">
+  <div class="container">
+    <h2 class="reveal">מעטפת שיווק + מכירות שעובדת בשבילך — לא בגללך</h2>
+    <div class="solution-inner">
+      <div class="solution-text reveal">
+        <p>אני ליאב כהן, ויחד עם השותף שלי לשיווק, בנינו תוכנית שעושה דבר אחד: לוקחת בעלי עסקי שירות שתקועים ומביאה אותם לתוצאות — בלי שהם צריכים להפוך לאנשי מכירות.</p>
+        <p>זה לא קורס שאתה צופה בו לבד. זה לא ייעוץ ב-<span dir="ltr">₪50K</span> שלא מתאים לשלב שלך. זו תוכנית של 3 חודשים שבה אנחנו עובדים יחד — מנתחים שיחות, מנהלים קמפיינים, ומלווים אותך בכל סגירה.</p>
+        <p>אנחנו לא מלמדים אותך תיאוריה. אנחנו נכנסים לשטח איתך.</p>
+      </div>
+      <div class="solution-photo reveal">
+        <div class="photo-placeholder">תמונת ליאב כהן</div>
+        <div class="photo-name">ליאב כהן</div>
+        <div class="photo-title">מאמן מכירות ואסטרטגיית צמיחה</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ PROGRAM ════════ -->
+<section class="program-section" id="program">
+  <div class="container">
+    <h2 class="reveal" style="text-align:center">מה קורה בתוכנית</h2>
+    <div class="program-grid">
+      <div class="program-card reveal-stagger" style="transition-delay:0s">
+        <h3>ליווי מכירות אישי</h3>
+        <p>אנחנו נכנסים לשיחות שלך, מנתחים את ההקלטות, ומשפרים את המגרש שלך בזמן אמת. לא תיאוריה — תרגול חי.</p>
+      </div>
+      <div class="program-card reveal-stagger" style="transition-delay:0.1s">
+        <h3>ניהול קמפיינים</h3>
+        <p>ניהול מלא של הקמפיינים שלך — מהאסטרטגיה ועד הפרסום. אתה מתמקד בלקוחות, אנחנו מביאים את הלידים.</p>
+      </div>
+      <div class="program-card reveal-stagger" style="transition-delay:0.2s">
+        <h3>סרטוני המלצות + ניתוח שיחות</h3>
+        <p>אנחנו מצלמים סרטוני המלצות עם הלקוחות שלך, ומנתחים עד 3 שיחות בשבוע לפידבק מיידי.</p>
+      </div>
+      <div class="program-card reveal-stagger" style="transition-delay:0.3s">
+        <h3>קבוצת וואטסאפ <span dir="ltr">24/5</span></h3>
+        <p>גישה ישירה לליאב ולצוות. שאלה? עצה? ב-<span dir="ltr">24/5</span>. לא אחרי 3 ימים — עכשיו.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ RESULTS ════════ -->
+<section class="results-section" id="results">
+  <div class="container">
+    <h2 class="reveal">מה שקורה כשעושים את זה נכון</h2>
+    <div class="big-stat reveal">
+      <div class="number" dir="ltr">₪4,000 → ₪40,000</div>
+      <div class="stat-sub">לקוח אחד. 3 חודשים. תוצאות אמיתיות.</div>
+    </div>
+
+    <div class="video-grid">
+      <div class="video-placeholder reveal-stagger" style="transition-delay:0s">
+        <div class="play-icon"></div>
+        <span class="video-label">סרטון המלצה — דני מ.</span>
+      </div>
+      <div class="video-placeholder reveal-stagger" style="transition-delay:0.1s">
+        <div class="play-icon"></div>
+        <span class="video-label">סרטון המלצה — שירה א.</span>
+      </div>
+      <div class="video-placeholder reveal-stagger" style="transition-delay:0.2s">
+        <div class="play-icon"></div>
+        <span class="video-label">סרטון המלצה — יוסי ר.</span>
+      </div>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal-stagger" style="transition-delay:0s">
+        <div class="testimonial-photo"></div>
+        <div class="testimonial-text">
+          <blockquote>"לפני שהתחלנו הייתי מוותר על כל שיחה שנייה. עכשיו אני סוגר 7 מתוך 10. ליאב שינה לי את הראש לגבי מכירות."</blockquote>
+          <div class="testimonial-name">דני מ.</div>
+          <div class="testimonial-biz">בעלים, סטודיו לעיצוב פנים</div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal-stagger" style="transition-delay:0.1s">
+        <div class="testimonial-photo"></div>
+        <div class="testimonial-text">
+          <blockquote>"הייתי בטוחה שאני צריכה יותר לידים. התברר שהבעיה הייתה שאני לא יודעת לסגור. תוך חודשיים הכפלתי הכנסה."</blockquote>
+          <div class="testimonial-name">שירה א.</div>
+          <div class="testimonial-biz">מאמנת כושר עצמאית</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ PRICING ════════ -->
+<section class="pricing-section" id="pricing">
+  <div class="container">
+    <h2 class="reveal">התוכנית — 3 חודשים של עבודה אמיתית</h2>
+    <p class="pricing-note reveal">המחיר ניתן בשיחת ייעוץ בלבד</p>
+    <div class="pricing-grid">
+      <div class="pricing-card reveal-stagger" style="transition-delay:0s">
+        <h3>ליווי מכירות</h3>
+        <p class="pricing-desc">ליווי אישי מלא על המכירות שלך</p>
+        <ul class="pricing-features">
+          <li>ניתוח שיחות מכירה שבועי</li>
+          <li>תסריטי מכירה מותאמים אישית</li>
+          <li>גישה לקבוצת וואטסאפ <span dir="ltr">24/5</span></li>
+        </ul>
+        <a href="#lead-form" class="btn-primary">לפרטים ומחיר — השאיר פרטים</a>
+      </div>
+      <div class="pricing-card featured reveal-stagger" style="transition-delay:0.1s">
+        <span class="pricing-badge">הכי פופולרי</span>
+        <h3>שיווק + מכירות</h3>
+        <p class="pricing-desc">מעטפת מלאה — גם הקמפיינים וגם המכירות</p>
+        <ul class="pricing-features">
+          <li>כל מה שבליווי מכירות</li>
+          <li>ניהול קמפיינים מלא</li>
+          <li>סרטוני המלצות מקצועיים</li>
+        </ul>
+        <a href="#lead-form" class="btn-primary">לפרטים ומחיר — השאיר פרטים</a>
+      </div>
+      <div class="pricing-card reveal-stagger" style="transition-delay:0.2s">
+        <h3>שיווק בלבד</h3>
+        <p class="pricing-desc">ניהול קמפיינים מקצועי</p>
+        <ul class="pricing-features">
+          <li>אסטרטגיית שיווק מותאמת</li>
+          <li>ניהול פרסום בפלטפורמות</li>
+          <li>דוחות ביצוע חודשיים</li>
+        </ul>
+        <a href="#lead-form" class="btn-primary">לפרטים ומחיר — השאיר פרטים</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FAQ ════════ -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <h2 class="reveal">שאלות שכנראה עולות לך עכשיו</h2>
+    <div class="faq-list">
+      <div class="faq-item reveal-stagger" style="transition-delay:0s">
+        <button class="faq-question" aria-expanded="false">
+          <span>אני לא צריך מאמן — אני צריך יותר לידים</span>
+          <span class="faq-arrow"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">בוא נעשה חשבון פשוט: אם אתה מקבל 20 לידים בחודש וסוגר 2, הבעיה היא לא כמות הלידים — היא אחוז הסגירה. רוב בעלי העסקים שמגיעים אלינו כבר מוציאים כסף על שיווק. הם פשוט שורפים לידים כי הם לא יודעים לסגור. תתקן את המכירות קודם — ופתאום אותם לידים שווים פי 3.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal-stagger" style="transition-delay:0.1s">
+        <button class="faq-question" aria-expanded="false">
+          <span>3 חודשים זה הרבה זמן להתחייב</span>
+          <span class="faq-arrow"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">3 חודשים זה הזמן המינימלי לתוצאות אמיתיות. כל מה שפחות מזה — זה קורס. אנחנו צריכים זמן לנתח את השיחות שלך, לבנות תסריטים, לתרגל, לתקן, ולראות את התוצאות בשטח. אחרי 3 חודשים אתה יוצא עם מיומנות שנשארת איתך לתמיד.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal-stagger" style="transition-delay:0.2s">
+        <button class="faq-question" aria-expanded="false">
+          <span>כבר ניסיתי קורסים ולא עזר</span>
+          <span class="faq-arrow"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">בדיוק בגלל זה אנחנו לא קורס. בקורס אתה לומד לבד, מנסה ליישם לבד, ונתקע לבד. כאן אנחנו עובדים יחד — מאזינים לשיחות שלך, נותנים פידבק בזמן אמת, ומלווים אותך בכל סגירה. ההבדל הוא כמו בין לקרוא ספר על שחייה לבין להיכנס לבריכה עם מאמן.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal-stagger" style="transition-delay:0.3s">
+        <button class="faq-question" aria-expanded="false">
+          <span>זה יקר לי עכשיו</span>
+          <span class="faq-arrow"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">בוא נעשה חשבון: אם אתה תקוע על <span dir="ltr">₪15,000</span> בחודש ואנחנו מכפילים את אחוז הסגירה שלך — ההשקעה מחזירה את עצמה בחודש הראשון. השאלה היא לא אם אתה יכול להרשות לעצמך את זה. השאלה היא כמה עולה לך להישאר איפה שאתה.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal-stagger" style="transition-delay:0.4s">
+        <button class="faq-question" aria-expanded="false">
+          <span>מה אם זה לא יעבוד בשבילי?</span>
+          <span class="faq-arrow"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">אני לא אבטיח לך מספרים — כי כל עסק שונה. מה שאני כן מבטיח: מחויבות מלאה לתהליך. אני לא לוקח כל מי שפונה. אם אני לא מאמין שאני יכול לעזור לך — אני אגיד לך את זה בשיחה הראשונה. אם נכנסת לתוכנית, זה כי אני רואה את הפוטנציאל.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ LEAD FORM ════════ -->
+<section class="form-section" id="lead-form">
+  <div class="container">
+    <h2 class="reveal">מוכן לצאת מהתקרה?</h2>
+    <p class="form-sub reveal">השאיר פרטים ונחזור אליך תוך שעה עם כל המידע</p>
+
+    <div class="lead-form reveal" id="formContainer">
+      <form id="contactForm" novalidate>
+        <div class="form-group">
+          <input type="text" name="name" placeholder="שם מלא" required autocomplete="name">
+          <div class="form-error" id="nameError">נא למלא שם מלא</div>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="אימייל" required autocomplete="email">
+          <div class="form-error" id="emailError">נא למלא כתובת אימייל תקינה</div>
+        </div>
+        <div class="form-group">
+          <input type="tel" name="phone" placeholder="מספר טלפון" required autocomplete="tel" dir="ltr" style="text-align:right">
+          <div class="form-error" id="phoneError">נא למלא מספר טלפון תקין (10 ספרות)</div>
+        </div>
+        <button type="submit" class="btn-primary form-submit-btn">
+          <span class="btn-text">אני רוצה לגדול ←</span>
+          <span class="spinner"></span>
+        </button>
+        <div class="form-global-error" id="globalError">אירעה שגיאה. נסה שוב או שלח הודעה ישירה.</div>
+      </form>
+    </div>
+
+    <div class="form-success" id="formSuccess">
+      <h3>תודה! נחזור אליך בוואטסאפ תוך שעה.</h3>
+      <p>בינתיים — קבע שיחה בזמן שנוח לך:</p>
+      <div class="calendly-wrapper">
+        <iframe src="https://calendly.com/PLACEHOLDER_LIAV_CALENDLY" title="קביעת שיחת ייעוץ" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FOOTER ════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-name">ליאב כהן | שיווק ומכירות</div>
+    <div class="footer-tagline">מלווים בעלי עסקים מהתקרה לצמיחה</div>
+    <div class="footer-links">
+      <a href="#">תנאי שימוש</a> | <a href="#">מדיניות פרטיות</a>
+    </div>
+    <div class="footer-copy">© 2025 כל הזכויות שמורות</div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el) {
+    observer.observe(el);
+  });
+
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.closest('.faq-item');
+      var answer = item.querySelector('.faq-answer');
+      var isOpen = item.classList.contains('open');
+
+      document.querySelectorAll('.faq-item.open').forEach(function(openItem) {
+        if (openItem !== item) {
+          openItem.classList.remove('open');
+          openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          openItem.querySelector('.faq-answer').style.maxHeight = null;
+        }
+      });
+
+      if (isOpen) {
+        item.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        answer.style.maxHeight = null;
+      } else {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  var form = document.getElementById('contactForm');
+  var formContainer = document.getElementById('formContainer');
+  var formSuccess = document.getElementById('formSuccess');
+  var globalError = document.getElementById('globalError');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    globalError.style.display = 'none';
+
+    var name = form.name.value.trim();
+    var email = form.email.value.trim();
+    var phone = form.phone.value.trim().replace(/[\s\-()]/g, '');
+
+    var valid = true;
+
+    if (!name) {
+      showError('name', 'nameError');
+      valid = false;
+    } else {
+      clearError('name', 'nameError');
+    }
+
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      showError('email', 'emailError');
+      valid = false;
+    } else {
+      clearError('email', 'emailError');
+    }
+
+    if (!/^\d{10}$/.test(phone)) {
+      showError('phone', 'phoneError');
+      valid = false;
+    } else {
+      clearError('phone', 'phoneError');
+    }
+
+    if (!valid) return;
+
+    var submitBtn = form.querySelector('.form-submit-btn');
+    submitBtn.classList.add('loading');
+    submitBtn.disabled = true;
+
+    fetch('https://hook.eu1.make.com/PLACEHOLDER_WEBHOOK_URL', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        phone: phone,
+        source: 'landing_page_liav'
+      })
+    })
+    .then(function(res) {
+      if (!res.ok) throw new Error('Server error');
+      formContainer.style.display = 'none';
+      formSuccess.style.display = 'block';
+      formSuccess.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    })
+    .catch(function() {
+      globalError.style.display = 'block';
+      submitBtn.classList.remove('loading');
+      submitBtn.disabled = false;
+    });
+  });
+
+  function showError(fieldName, errorId) {
+    form[fieldName].classList.add('error');
+    document.getElementById(errorId).style.display = 'block';
+  }
+
+  function clearError(fieldName, errorId) {
+    form[fieldName].classList.remove('error');
+    document.getElementById(errorId).style.display = 'none';
+  }
+})();
+</script>
+</body>
+</html>
